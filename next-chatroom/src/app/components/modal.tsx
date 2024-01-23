@@ -37,6 +37,12 @@ const LandingModalBody = () => {
 }
 
 const ChatroomSearch = () => {
+    const chatrooms = getChatrooms()
+    console.log('Available chatrooms:', chatrooms)
+    useEffect(() => {
+        getChatrooms()
+    }, [])
+
     return (
         <Box className={styles.modalItemContainer}>
             <Heading className={styles.modalItemTitle} as='h2' size='sm'>Search for a Chatroom</Heading>
